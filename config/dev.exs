@@ -2,7 +2,7 @@ import Config
 
 # Configure your database
 config :project, Project.Repo,
-  username: "postgres",
+  username: System.get_env("DATABASE_USERNAME"),
   password: "postgres",
   hostname: "localhost",
   database: "project_dev",

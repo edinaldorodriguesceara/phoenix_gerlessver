@@ -6,7 +6,7 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :project, Project.Repo,
-  username: "postgres",
+  username: System.get_env("DATABASE_USERNAME"),
   password: "postgres",
   hostname: "localhost",
   database: "project_test#{System.get_env("MIX_TEST_PARTITION")}",
