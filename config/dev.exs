@@ -20,7 +20,7 @@ config :project, Project.Repo,
 config :project, ProjectWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: System.get_env("IP") |> String.split(".") |> Enum.map(&String.to_integer/1) |> List.to_tuple, port: System.get_env("PORT")],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
