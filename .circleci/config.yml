@@ -10,7 +10,7 @@ jobs:
     machine:
       image: ubuntu-2204:current
       docker_layer_caching: true
-    resource_class: medium
+    resource_class: large
     working_directory: ~/phoenix_gerlessver
     steps:
       - checkout
