@@ -28,7 +28,8 @@ jobs:
       - run:
           name: Dependencies
           command: |
-            docker compose exec app bash "mix deps.get && mix deps.compile"
+            docker compose exec app bash "mix deps.get"
+            docker compose exec app bash "mix deps.compile"
             docker compose exec app bash "npm install"
       - run:
           name: Setup Database
