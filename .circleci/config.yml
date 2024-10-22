@@ -31,11 +31,10 @@ jobs:
       - run:
           name: Dependencies
           command: |
-            docker compose exec app bash -c "
-              mix local.hex --force &&
-              mix deps.get &&
-              mix deps.compile
-            "
+            docker compose exec app mix local.hex --force
+            docker compose exec app mix deps.get
+            docker compose exec app mix deps.compile
+            
 
       - run:
           name: NPM 
