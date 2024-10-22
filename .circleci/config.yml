@@ -32,6 +32,7 @@ jobs:
           name: Dependencies
           command: |
             docker compose exec app mix local.hex --force
+            docker compose exec app mix local.rebar --force
             docker compose exec app mix deps.get
             docker compose exec app mix deps.compile
             
