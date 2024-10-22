@@ -30,6 +30,8 @@ jobs:
           command: |
            docker compose exec app mix deps.get
            docker compose exec app mix deps.compile
+           docker compose exec app mix ecto
+           docker compose exec app npm install
       - save_cache:
           name: Save Cache
           key: '{{ checksum "mix.lock" }}'
