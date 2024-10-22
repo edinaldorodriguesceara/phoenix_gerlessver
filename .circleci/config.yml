@@ -28,12 +28,12 @@ jobs:
       - run:
           name: Dependencies
           command: |
-            docker compose exec app bash "mix deps.get"
-            docker compose exec app bash "mix deps.compile"
-            docker compose exec app bash "npm install"
+            docker compose exec app "mix deps.get"
+            docker compose exec app "mix deps.compile"
+            docker compose exec app "npm install"
       - run:
           name: Setup Database
-          command: docker compose exec app bash -c "mix ecto.create"
+          command: docker compose exec app "mix ecto.create"
       - save_cache:
           name: Save Cache
           key: '{{ checksum "mix.lock" }}'
