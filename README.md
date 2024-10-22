@@ -2,9 +2,9 @@
 
 # Phoenix_gerlessver
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/edinaldorodriguesceara/phoenix_gerlessver/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/edinaldorodriguesceara/phoenix_gerlessver/tree/master)
+
 <img src="https://blixtdev.com/content/images/size/w2000/2023/02/1WvDl2WlPs7cR8TTBvrjpyw.png" alt="Phoenix Logo" width="600"/>
-
-
 
 
 https://github.com/juniormesquitadandao/gerlessver
