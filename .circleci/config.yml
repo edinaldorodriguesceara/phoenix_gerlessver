@@ -14,6 +14,7 @@ jobs:
     working_directory: ~/phoenix_gerlessver
     steps:
       - checkout
+
       - run:
           name: Build
           command: |
@@ -22,15 +23,18 @@ jobs:
       - restore_cache:
           name: Restore Cache
           key: '{{ checksum "mix.lock" }}'
+
       - run:
           name: Up
           command: docker compose up -d
+
       - run:
           name: Dependencies
           command: |
             docker compose exec app mix deps.get
             docker compose exec app mix deps.compile
             docker compose exec app npm install
+
       - run:
           name: Setup Database
           command: docker compose exec app mix ecto.create
@@ -39,6 +43,7 @@ jobs:
           key: '{{ checksum "mix.lock" }}'
           paths:
             - deps
+            
       - run:
           name: Test
           command: docker compose exec app mix test
