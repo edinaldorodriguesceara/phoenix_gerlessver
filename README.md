@@ -1,5 +1,3 @@
-
-
 # Phoenix_gerlessver
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/edinaldorodriguesceara/phoenix_gerlessver/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/edinaldorodriguesceara/phoenix_gerlessver/tree/master)
